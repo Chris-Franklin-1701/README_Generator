@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 //const generateMarkdown = require('./utils/generateMarkdown')
 
 
@@ -44,12 +45,12 @@ const questions = [{
         {
             type: 'input',
             message: 'What is your GitHub username?',
-            name: 'GitHub'
+            name: 'github'
         },
         {
             type: 'input',
             message: 'What is your e-mail address?',
-            name: 'e-mail'
+            name: 'email'
         }];
 
         inquirer.prompt(questions)
@@ -66,9 +67,11 @@ const questions = [{
 //    };
 // TODO: Create a function to write README file
 function writeToFile(answers) {
-    const filename = "README".toUpperCase().trim();
+    const filename = ("./output/README.md");
+    let steve = generateMarkdown(answers);
 
-    fs.writeFile(`${filename}.txt`, JSON.stringify(answers, null, 4), (err) => {
+
+    fs.writeFile(`${filename}`, steve, (err) => {
         err ? console.error(err) : console.log("success!!");
     });
 };
