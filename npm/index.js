@@ -38,6 +38,7 @@ inquirer
         {
             type: 'checkbox',
             message: 'Which license(s) would you like to use with your project?',
+            name: 'license',
             choices: ['MIT', 'Mozilla', 'ISC', 'GNU']
         },
         {
