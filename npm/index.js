@@ -5,10 +5,7 @@ const fs = require('fs');
 
 
 // TODO: Create an array of questions for user input
-//const questions = []
-inquirer
-    .prompt([
-        {
+const questions = [{
             type: 'input',
             message: 'What is the title for your project?',
             name: 'title'
@@ -53,13 +50,12 @@ inquirer
             type: 'input',
             message: 'What is your e-mail address?',
             name: 'e-mail'
-        },
-    ])
-        .then((data) => {
-            const fileName = 'README'
-            fs.writeFile(`${fileName}.txt`, JSON.stringify(data, null, 4), (err) => {
-                err ? console.error(err) : console.log("success!");
-            });
+        }];
+
+        inquirer.prompt(questions)
+        .then((answers) => {
+            console.log(answers);
+            writeToFile(answers);
         });
 
 //const license = data.choices;
@@ -69,7 +65,13 @@ inquirer
 //        license,
 //    };
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+function writeToFile(answers) {
+    const filename = "README".toUpperCase().trim();
+
+    fs.writeFile(`${filename}.txt`, JSON.stringify(answers, null, 4), (err) => {
+        err ? console.error(err) : console.log("success!!");
+    });
+};
 
 // TODO: Create a function to initialize app
 //function init() {}
