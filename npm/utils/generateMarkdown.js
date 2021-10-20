@@ -1,5 +1,3 @@
-
-
 const mit = {
   name: 'MIT License',
   badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
@@ -41,13 +39,17 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  ${renderLicenseLink()}
+};
 */
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
+  const licenseURL = answers.license
+  
   return `
   ## ${answers.title}:
-
+  [![License: ${answers.license}](https://img.shields.io/badge/License-${licenseURL()}-blue.svg)](https://opensource.org/licenses/${answers.license})
 
   ## Description:
   ${answers.description}
@@ -67,10 +69,12 @@ function generateMarkdown(answers) {
   ${answers.testing}
 
   ## License:
-  ${answers.choices}
+  ${answers.license}
+  https://opensource.org/licenses/${answers.license}
 
   ## Contact:
-  ${answers.github}
+  https://github.com/${answers.github}/${answers.github}.github.io
+  
   ${answers.email}
 
 
