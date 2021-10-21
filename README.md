@@ -4,6 +4,9 @@
   ## Description:
   This is a simple but powerful README generator
 
+[!(https://watch.screencastify.com/v/ngsKYXN64mYmB3tNjga4)] Live demonstration
+
+https://silversssc.github.io/README_Generator/ - link to github repo
 
   ## Installation:
   ``` md git clone to your repo ```

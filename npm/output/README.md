@@ -1,9 +1,9 @@
 
-  ## README Generator:
+  ## Readme Generator:
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
   ## Description:
-  This is a simple but powerful README generator
+  This is a simple but powerful readme generator
 
 
   ## Installation:
@@ -23,7 +23,7 @@
   MIT
   https://opensource.org/licenses/MIT
 
-  ## Contact:
+  ## Questions:
   https://github.com/SilverSSSC/SilverSSSC.github.io
   
   CFrank306@gmail.com
