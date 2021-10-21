@@ -40,7 +40,7 @@ const questions = [{
             type: 'checkbox',
             message: 'Which license(s) would you like to use with your project?',
             name: 'license',
-            choices: ['MIT', 'MPL-2.0', 'ISC', 'gpl-3.0']
+            choices: ['MIT', 'ISC', 'GPLv3']
         },
         {
             type: 'input',
